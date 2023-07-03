@@ -18,5 +18,6 @@ for i in range(1,t+1):
         
         elif arr[i] == 2 and j % 2 == 1:
             dp[i][j] = max(dp[i-1][j], dp[i-1][j-1]) + 1
-
+        else:
+            dp[i][j] = max(dp[i-1][j], dp[i-1][j-1])
 print(max(dp[t]))
